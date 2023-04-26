@@ -1,0 +1,11 @@
+//URL BASE DA API: http://localhost:3001/api 
+
+
+GET   http://localhost:3001/api/tarefas
+Content-Type: application/json
+
+{
+    "titulo": "Dario",
+    "descricao": "Ele Gente Voa",
+    "concluida": true
+}
