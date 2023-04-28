@@ -43,6 +43,26 @@
 }
 
 /* BOTÃO DELETAR UMA TAREFA */
+.deletetask-button-popup {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    background-color: #f01438;
+    cursor: pointer;
+}
+
+.deletetask-button-popup:hover {
+    background-color: #dd1536;
+}
+
+.deletetask-button-popup:focus {
+    background-color: #f01438;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
 
 /*CONTAINER QUE ESCURECE CONTEUDO DO FUNDO*/
 .container-popup{
@@ -180,6 +200,30 @@
     outline: none;
     color: rgba(0, 0, 0, 0.644);
     font-weight: 550;
+}
+
+.deletetask-popup-section {
+    width: 100%;
+    height: 72%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.deletetask-popup-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+.deletetask-popup-section p {
+    font-size: 1.5em;
+}
+
+.deletetask-popup-section span {
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 /* RODAPÉ DO POP-UP */

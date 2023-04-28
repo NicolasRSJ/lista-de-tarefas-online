@@ -1,4 +1,5 @@
 import './App.css';
+import DeleteTask from './Components/ButtonsTask/DeleteTask';
 import EditTask from './Components/ButtonsTask/EditTask/EditTask';
 import NewTask from './Components/ButtonsTask/NewTask/NewTask';
 
@@ -14,6 +15,7 @@ function App() {
       <section>
         <NewTask/>
         <EditTask/>
+        <DeleteTask/>
       </section>
       <footer>
         <span className="AppContainer-footer-span">2023 © To-Do List - Lista de Tarefas Online</span>
