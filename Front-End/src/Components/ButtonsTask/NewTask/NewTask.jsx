@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useCallback} from 'react';
-import "./index.css"
+import "../CSS/ButtonTask.css"
 
 const NewTask = () => {
     const [showPopup, setShowPopup] = useState(false);
@@ -28,9 +28,9 @@ const NewTask = () => {
     const handleNewTask = useCallback((event) => {
         event.preventDefault();
         const task = {
-            nome: newTaskName,
+            titulo: newTaskName,
             descricao: newTaskDescription,
-            concluido: newTaskStatus
+            concluida: newTaskStatus
         };
         setNewTask(JSON.stringify(task));
         setNewTaskName('');
@@ -51,7 +51,7 @@ const NewTask = () => {
     
     return(
         <>
-            <button className='button-popup' onClick={togglePopup}>Nova Tarefa</button>
+            <button className='newtask-button-popup' onClick={togglePopup}>Nova Tarefa</button>
             {showPopup && (
                <div className='container-popup'>
                     <div className='popup'>

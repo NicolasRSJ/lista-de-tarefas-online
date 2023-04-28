@@ -1,5 +1,6 @@
 import './App.css';
-import NewTask from './Components/ButtonsTask/NewTask';
+import EditTask from './Components/ButtonsTask/EditTask/EditTask';
+import NewTask from './Components/ButtonsTask/NewTask/NewTask';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
         <h2 className='Appcontainer-article-description'>Sua lista de tarefas online, para nunca se perde em seus compromissos e afazeres.</h2>
       </article>
       <section>
-        
+        <NewTask/>
+        <EditTask/>
       </section>
       <footer>
         <span className="AppContainer-footer-span">2023 © To-Do List - Lista de Tarefas Online</span>

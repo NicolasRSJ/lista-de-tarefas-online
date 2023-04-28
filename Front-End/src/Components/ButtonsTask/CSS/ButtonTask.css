@@ -1,5 +1,5 @@
 /* BOTÃO CRIAR UMA NOVA TAREFA */
-.button-popup {
+.newtask-button-popup {
     width: auto;
     height: auto;
     padding: 10px;
@@ -11,14 +11,38 @@
     cursor: pointer;
 }
 
-.button-popup:hover {
+.newtask-button-popup:hover {
     background-color: #30bd2b;
 }
 
-.button-popup:focus {
+.newtask-button-popup:focus {
     background-color: #32ce2d;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
+
+/* BOTÃO EDITAR UMA TAREFA */
+.edittask-button-popup {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    background-color: #1317d8;
+    cursor: pointer;
+}
+
+.edittask-button-popup:hover {
+    background-color: #1417bd;
+}
+
+.edittask-button-popup:focus {
+    background-color: #1317d8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* BOTÃO DELETAR UMA TAREFA */
 
 /*CONTAINER QUE ESCURECE CONTEUDO DO FUNDO*/
 .container-popup{
