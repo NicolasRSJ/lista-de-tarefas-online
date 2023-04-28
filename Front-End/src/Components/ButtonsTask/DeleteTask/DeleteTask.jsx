@@ -15,7 +15,7 @@ const DeleteTask = (props) => {
     // FUNÇÃO PARA CAPTAR O CLIQUE DO BOTÃO "DELETAR"
     const handleClick = useCallback(() => {
         setButtonClick(true);
-        showPopup(false)
+        setShowPopup(false)
     }, [setButtonClick, showPopup]);
 
     // REACT HOOK QUE SERÁ EXECUTADO ASSIM QUE A CONSTANTE "NEWTASK" FOR DECLARADA.
