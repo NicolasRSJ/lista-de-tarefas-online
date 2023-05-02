@@ -4,10 +4,10 @@ import "../CSS/ButtonTask.css"
 const EditTask = (props) => {
     const [showPopup, setShowPopup] = useState(false);
     const [editTask, setEditTask] = useState();
-    const [idTask, setIdTask] = useState(props._id);
-    const [editTaskName, setEditTaskName] = useState(props.titulo);
-    const [editTaskDescription, setEditTaskDescription] = useState(props.descricao);
-    const [editTaskStatus, setEditTaskStatus] = useState(props.concluido);
+    const [idTask, setIdTask] = useState(props.task._id);
+    const [editTaskName, setEditTaskName] = useState(props.task.titulo);
+    const [editTaskDescription, setEditTaskDescription] = useState(props.task.descricao);
+    const [editTaskStatus, setEditTaskStatus] = useState(props.task.concluido);
     
     // FUNÇÃO PARA ABRIR E FECHAR POP-UP
     const togglePopup = () => {

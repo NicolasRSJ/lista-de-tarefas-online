@@ -6,9 +6,9 @@ import './TaskTable.css';
 
 function TaskTable() {
     const [tasks, setTasks] = useState([
-        { _id: 1, titulo: 'Tarefa 1', descricao: 'Descrição da Tarefa 1', conclu_ido: false },
-        { _id: 2, titulo: 'Tarefa 2', descricao: 'Descrição da Tarefa 2', conclu_ido: true },
-        { _id: 3, titulo: 'Tarefa 3', descricao: 'Descrição da Tarefa 3', conclu_ido: false },
+        { _id: 1, titulo: 'Tarefa 1', descricao: 'Descrição da Tarefa 1', concluido: false },
+        { _id: 2, titulo: 'Tarefa 2', descricao: 'Descrição da Tarefa 2', concluido: true },
+        { _id: 3, titulo: 'Tarefa 3', descricao: 'Descrição da Tarefa 3', concluido: false },
     ]);
 
     return(
@@ -28,13 +28,13 @@ function TaskTable() {
                 <tbody>
                     {
                         tasks.map((task, index) => (
-                            <tr key={index}>
+                            <tr key={index} id='bodyrow'>
                                 <td>{task.titulo}</td>
                                 <td>{task.descricao}</td>
                                 <td>{task.concluido ? 'Completa' : 'Pendente'}</td>
-                                <td>
-                                    <EditTask props={task} />
-                                    <DeleteTask props={task} />
+                                <td id='tabledata'>
+                                    <EditTask task={task} />
+                                    <DeleteTask task={task} />
                                 </td>
                             </tr>
                         ))

@@ -4,8 +4,8 @@ import "../CSS/ButtonTask.css"
 const DeleteTask = (props) => {
     const [showPopup, setShowPopup] = useState(false);
     const [buttonClick, setButtonClick] = useState(false);
-    const [idTask, setIdTask] = useState(props._id);
-    const [deleteNameTask, setDeleteNameTask] = useState(props.titulo);
+    const [idTask, setIdTask] = useState(props.task._id);
+    const [deleteNameTask, setDeleteNameTask] = useState(props.task.titulo);
     
     // FUNÇÃO PARA ABRIR E FECHAR POP-UP
     const togglePopup = () => {
