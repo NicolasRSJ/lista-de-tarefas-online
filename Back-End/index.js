@@ -5,6 +5,10 @@ const app = express();
 const conn = require('./db/conn');
 
 // CONFIGURANDO O BODY PARSE
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+})
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
