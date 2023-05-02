@@ -40,7 +40,7 @@ const EditTask = (props) => {
     // REACT HOOK QUE SERÁ EXECUTADO ASSIM QUE A CONSTANTE "editTASK" FOR DECLARADA.
     useEffect(() => {
         try{
-            console.log(editTask)
+            
             // INSERIR MÉTODO PUT
         } catch(err) {
             console.error("Ocorreu um error na requsição: " + err.message);

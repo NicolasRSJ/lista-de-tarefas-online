@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import EditTask from '../ButtonsTask/EditTask/EditTask';
 import NewTask from '../ButtonsTask/NewTask/NewTask';
 import DeleteTask from '../ButtonsTask/DeleteTask/DeleteTask';
 import './TaskTable.css';
+import Get from '../../Connection/Routes/GET';
 
 function TaskTable() {
-    const [tasks, setTasks] = useState([
-        { _id: 1, titulo: 'Tarefa 1', descricao: 'Descrição da Tarefa 1', concluido: false },
-        { _id: 2, titulo: 'Tarefa 2', descricao: 'Descrição da Tarefa 2', concluido: true },
-        { _id: 3, titulo: 'Tarefa 3', descricao: 'Descrição da Tarefa 3', concluido: false },
-    ]);
+    const tasks = Get();
+    console.log(tasks);
 
     return(
         <div className='crud'>

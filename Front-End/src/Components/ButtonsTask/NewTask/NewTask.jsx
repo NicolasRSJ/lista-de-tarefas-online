@@ -42,7 +42,6 @@ const NewTask = () => {
     // REACT HOOK QUE SERÁ EXECUTADO ASSIM QUE A CONSTANTE "NEWTASK" FOR DECLARADA.
     useEffect(() => {
         try{
-            console.log(newTask)
             // INSERIR MÉTODO POST
         } catch(err) {
             console.error("Ocorreu um error na requsição: " + err.message);

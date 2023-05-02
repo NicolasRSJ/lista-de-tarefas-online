@@ -21,7 +21,6 @@ const DeleteTask = (props) => {
     // REACT HOOK QUE SERÁ EXECUTADO ASSIM QUE A CONSTANTE "NEWTASK" FOR DECLARADA.
     useEffect(() => {
         try{
-            console.log(idTask)
             // INSERIR MÉTODO POST
         } catch(err) {
             console.error("Ocorreu um error na tentativa de requsição: " + err.message);
