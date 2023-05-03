@@ -7,6 +7,7 @@ const conn = require('./db/conn');
 // CONFIGURANDO O BODY PARSE
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', 'content-type');
     next();
 })
 app.use(bodyParser.urlencoded({ extended: true }));
