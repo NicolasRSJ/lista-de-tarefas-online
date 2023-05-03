@@ -1,9 +1,10 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import "../CSS/ButtonTask.css"
+import Post from '../../../Routes/POST';
 
 const NewTask = () => {
     const [showPopup, setShowPopup] = useState(false);
-    const [newTask, setNewTask] = useState();
+    const [newTask, setNewTask] = useState(null);
     const [newTaskName, setNewTaskName] = useState('');
     const [newTaskDescription, setNewTaskDescription] = useState('');
     const [newTaskStatus, setNewTaskStatus] = useState(false);
@@ -32,7 +33,7 @@ const NewTask = () => {
             descricao: newTaskDescription,
             concluida: newTaskStatus
         };
-        setNewTask(JSON.stringify(task));
+        setNewTask(task);
         setNewTaskName('');
         setNewTaskDescription('');
         setNewTaskStatus(false);
@@ -42,14 +43,16 @@ const NewTask = () => {
     // REACT HOOK QUE SERÁ EXECUTADO ASSIM QUE A CONSTANTE "NEWTASK" FOR DECLARADA.
     useEffect(() => {
         try{
-            // INSERIR MÉTODO POST
+            if(newTask != null){
+                Post(newTask);
+            }    
         } catch(err) {
             console.error("Ocorreu um error na requsição: " + err.message);
         }
     }, [newTask])
     
     return(
-        <>
+        <React.Fragment>
             <button className='newtask-button-popup' onClick={togglePopup}>Nova Tarefa</button>
             {showPopup && (
                <div className='container-popup'>
@@ -75,7 +78,7 @@ const NewTask = () => {
                     </div>
                </div> 
             )}
-        </>
+        </React.Fragment>
     );
 }
 

@@ -8,7 +8,7 @@ function App() {
         <h1 className='AppContainer-header-title'>To-Do List</h1>
       </header>
       <article>
-        <h2 className='Appcontainer-article-description'>Sua lista de tarefas online, para nunca se perderS em seus compromissos e afazeres.</h2>
+        <h2 className='Appcontainer-article-description'>Sua lista de tarefas online, para nunca se perder em seus compromissos e afazeres.</h2>
       </article>
       <section>
         <TaskTable/>

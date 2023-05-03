@@ -3,12 +3,11 @@ import EditTask from '../ButtonsTask/EditTask/EditTask';
 import NewTask from '../ButtonsTask/NewTask/NewTask';
 import DeleteTask from '../ButtonsTask/DeleteTask/DeleteTask';
 import './TaskTable.css';
-import Get from '../../Connection/Routes/GET';
+import Get from '../../Routes/GET';
 
 function TaskTable() {
     const tasks = Get();
-    console.log(tasks);
-
+    
     return(
         <div className='crud'>
             <div className='crud-newtask'>

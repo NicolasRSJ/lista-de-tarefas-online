@@ -4,8 +4,9 @@ const Get = () => {
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    /* MÉTODO PARA BUSCAR DOS DADOS NA API */
+    /* HOOK PARA ATUALIZAR O ESTADO DA APLICAÇÃO SEMPRE QUE O COMPONENTE FOR MONTADO OU ATUALIZADO. */
     useEffect(() => {
+        /* MÉTODO QUE IRÁ REALIZAR A REQUISIÇÃO PARA A API. */
         fetch("http://localhost:3001/api/tarefas")
             .then(resp => resp.json())
             .then(datas => {
