@@ -1,11 +1,12 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import "../CSS/ButtonTask.css"
+import Delete from '../../../Routes/DELETE/indes';
 
 const DeleteTask = (props) => {
     const [showPopup, setShowPopup] = useState(false);
     const [buttonClick, setButtonClick] = useState(false);
-    const [idTask, setIdTask] = useState(props.task._id);
-    const [deleteNameTask, setDeleteNameTask] = useState(props.task.titulo);
+    const idTask = props.task._id;
+    const deleteNameTask = props.task.titulo;
     
     // FUNÇÃO PARA ABRIR E FECHAR POP-UP
     const togglePopup = () => {
@@ -16,12 +17,14 @@ const DeleteTask = (props) => {
     const handleClick = useCallback(() => {
         setButtonClick(true);
         setShowPopup(false)
-    }, [setButtonClick, showPopup]);
+    }, [setButtonClick, setShowPopup]);
 
     // REACT HOOK QUE SERÁ EXECUTADO ASSIM QUE A CONSTANTE "NEWTASK" FOR DECLARADA.
     useEffect(() => {
         try{
-            // INSERIR MÉTODO POST
+            if(buttonClick !== false){
+                Delete(idTask);
+            }
         } catch(err) {
             console.error("Ocorreu um error na tentativa de requsição: " + err.message);
         }
