@@ -3,10 +3,10 @@ import "../CSS/ButtonTask.css"
 import Delete from '../../../Routes/DELETE/indes';
 
 const DeleteTask = (props) => {
-    const [showPopup, setShowPopup] = useState(false);
-    const [buttonClick, setButtonClick] = useState(false);
     const idTask = props.task._id;
     const deleteNameTask = props.task.titulo;
+    const [showPopup, setShowPopup] = useState(false);
+    const [buttonClick, setButtonClick] = useState(false);
     
     // FUNÇÃO PARA ABRIR E FECHAR POP-UP
     const togglePopup = () => {
@@ -16,7 +16,7 @@ const DeleteTask = (props) => {
     // FUNÇÃO PARA CAPTAR O CLIQUE DO BOTÃO "DELETAR"
     const handleClick = useCallback(() => {
         setButtonClick(true);
-        setShowPopup(false)
+        setShowPopup(false);
     }, [setButtonClick, setShowPopup]);
 
     // REACT HOOK QUE SERÁ EXECUTADO ASSIM QUE A CONSTANTE "NEWTASK" FOR DECLARADA.

@@ -1,10 +1,11 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import "../CSS/ButtonTask.css"
+import Put from '../../../Routes/PUT';
 
 const EditTask = (props) => {
+    const idTask = props.task._id;
     const [showPopup, setShowPopup] = useState(false);
-    const [editTask, setEditTask] = useState();
-    const [idTask, setIdTask] = useState(props.task._id);
+    const [editTask, setEditTask] = useState(null);
     const [editTaskName, setEditTaskName] = useState(props.task.titulo);
     const [editTaskDescription, setEditTaskDescription] = useState(props.task.descricao);
     const [editTaskStatus, setEditTaskStatus] = useState(props.task.concluido);
@@ -33,19 +34,20 @@ const EditTask = (props) => {
             descricao: editTaskDescription,
             concluida: editTaskStatus
         };
-        setEditTask(JSON.stringify(task));
+        setEditTask(task);
         setShowPopup(false);
     }, [editTaskName, editTaskDescription, editTaskStatus]);
 
     // REACT HOOK QUE SERÁ EXECUTADO ASSIM QUE A CONSTANTE "editTASK" FOR DECLARADA.
     useEffect(() => {
         try{
-            
-            // INSERIR MÉTODO PUT
+            if( editTask !== null ) {
+                Put(idTask, editTask);
+            }
         } catch(err) {
             console.error("Ocorreu um error na requsição: " + err.message);
         }
-    }, [editTask])
+    }, [editTask, idTask])
     
     return(
         <>
