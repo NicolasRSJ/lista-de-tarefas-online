@@ -2,14 +2,19 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
+const cors = require('cors');
 const conn = require('./db/conn');
 
-// CONFIGURANDO O BODY PARSE
+// CONFIGURANDO PERMISSÕES DO CABEÇALHO DA API
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', 'content-type');
     next();
 })
+
+// CONFIGURANDO CORS
+app.use(cors());
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
