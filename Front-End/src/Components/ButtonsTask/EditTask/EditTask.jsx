@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useCallback} from 'react';
-import "../CSS/ButtonTask.css"
 import Put from '../../../Routes/PUT';
+import "../CSS/ButtonTask.css"
 
 const EditTask = (props) => {
     const idTask = props.task._id;

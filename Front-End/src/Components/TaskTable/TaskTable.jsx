@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import EditTask from '../ButtonsTask/EditTask/EditTask';
 import NewTask from '../ButtonsTask/NewTask/NewTask';
 import DeleteTask from '../ButtonsTask/DeleteTask/DeleteTask';
 import './TaskTable.css';
-import Get from '../../Routes/GET';
+import MyContext from '../../Context';
 
 function TaskTable() {
-    const tasks = Get();
-    
-    return(
+
+    const { dataContext: tasks } = useContext(MyContext);
+
+    return (
         <div className='crud'>
             <div className='crud-newtask'>
-                <NewTask/>
+                <NewTask />
             </div>
             <table className='crud-table'>
                 <thead>
