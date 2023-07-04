@@ -1,0 +1,283 @@
+/* BOTÃO CRIAR UMA NOVA TAREFA */
+.newtask-button-popup {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    background-color: #32ce2d;
+    cursor: pointer;
+}
+
+.newtask-button-popup:hover {
+    background-color: #30bd2b;
+}
+
+.newtask-button-popup:focus {
+    background-color: #32ce2d;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* BOTÃO EDITAR UMA TAREFA */
+.edittask-button-popup {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    background-color: #1317d8;
+    cursor: pointer;
+}
+
+.edittask-button-popup:hover {
+    background-color: #1417bd;
+}
+
+.edittask-button-popup:focus {
+    background-color: #1317d8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* BOTÃO DELETAR UMA TAREFA */
+.deletetask-button-popup {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    background-color: #f01438;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.deletetask-button-popup:hover {
+    background-color: #dd1536;
+}
+
+.deletetask-button-popup:focus {
+    background-color: #f01438;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/*CONTAINER QUE ESCURECE CONTEUDO DO FUNDO*/
+.container-popup{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/*ESTRUTURA DO POP-UP*/
+.popup {
+    width: 45%;
+    height: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+    animation: popup-show 0.3s ease forwards;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes popup-show {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+}
+
+/* CABEÇALHO DO POP-UP */
+.popup-header {
+    width: 100%;
+    height: 14%;
+    background-image: linear-gradient(255deg , #F44336 0%, #E91E63 50%,#9C27B0 100%);
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.popup-header h1 {
+    color: white;
+    font-size: 1.4rem;
+}
+
+/* SEÇÃO DO POP-UP */
+.popup-section {
+    width: 100%;
+    height: 72%;
+}
+
+.popup-section form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.popup-section form input[type="text"] {
+    width: 60%;
+    height: 13%;
+    padding: 10px;
+    background-color: rgba(158, 158, 158, 0.342);
+    border: none;
+    border-radius: 5px;
+}
+
+.popup-section form input[type="text"]:hover {
+    background-color: rgba(158, 158, 158, 0.521);
+}
+
+.popup-section form input[type="text"]:focus {
+    background-color: rgba(158, 158, 158, 0.521);
+    outline: none;
+}
+
+.popup-section form input[type="text"]:focus::placeholder {
+    color: rgba(0, 0, 0, 0.644);
+    font-weight: 600;
+}
+
+.popup-section form input[type="text"]::placeholder {
+    font-weight: 600;
+    color: black;
+    
+}
+
+.popup-section form select {
+    width: 60%;
+    height: 13%;
+    background-color: transparent;
+    border: none;
+    font-size: 0.9rem;
+    padding: 0px 0px 0px 5px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.644);
+    font-weight: 550;
+    background-color: rgba(158, 158, 158, 0.342);
+    border-radius: 5px;
+}
+
+.popup-section form select:hover {
+    background-color: rgba(158, 158, 158, 0.521);
+}
+
+.popup-section form select:focus {
+    background-color: rgba(158, 158, 158, 0.521);
+    outline: none;
+    border: none;
+}
+
+.popup-section form select .option-invisible {
+    display: none;
+}
+
+.popup-section form select option {
+    outline: none;
+    color: rgba(0, 0, 0, 0.644);
+    font-weight: 550;
+}
+
+.deletetask-popup-section {
+    width: 100%;
+    height: 72%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.deletetask-popup-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+.deletetask-popup-section p {
+    font-size: 1.5em;
+}
+
+.deletetask-popup-section span {
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* RODAPÉ DO POP-UP */
+
+.popup-footer {
+    width: 100%;
+    height: 14%;
+    border-radius: 0 0 10px 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.39);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.popup-footer button {
+    width: 15%;
+    height: 65%;
+    border: none;
+    border-radius: 5px;
+    background-color: #da1919;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.popup-footer button:hover {
+    background-color: #bd1717;
+}
+
+.popup-footer button:focus {
+    background-color: #da1919;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.popup-footer button[type = "submit"] {
+    width: 15%;
+    height: 65%;
+    border: none;
+    border-radius: 5px;
+    background-color: #7227b0;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.popup-footer button[type = "submit"]:hover {
+    background-color: #56168a;
+}
+  
+.popup-footer button[type = "submit"]:focus {
+    background-color: #7227b0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+} 
+  

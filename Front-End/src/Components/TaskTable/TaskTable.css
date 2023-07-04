@@ -1,0 +1,50 @@
+/* CONTAINER CRUD */
+.crud {
+    width: 80%;
+    height: auto;
+    display: block;
+}
+
+/* CONTAINER DO BOTÃO NEWTASK */
+.crud-newtask {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* TABELA CRUD */
+.crud-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.crud-table th, td {
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+.crud-table th {
+    font-size: 1.1rem;
+    font-weight: 750;
+    padding: 10px;
+}
+
+.crud-table td {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 10px;
+}
+
+/* CABECALHO DA TABELA */
+.crud-table thead {
+    height:30px;
+    background-image: linear-gradient(255deg , #F44336 0%, #E91E63 50%,#9C27B0 100%);
+    color: white;
+}
+
+/* SEÇÃO DA TABELA */
+.crud-table bodyrow:hover {
+    background-color: #f5f5f5
+}
